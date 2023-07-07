@@ -1,0 +1,9 @@
+{
+  "name": "book-bank",
+  "description": "本の購入金額の累計を表示する",
+  "version": "1.0.0",
+  "browser_action": {
+    "default_popup": "./dist/index.html"
+  },
+  "manifest_version": 2
+}
