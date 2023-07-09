@@ -1,5 +1,6 @@
 import { z } from 'zod'
 import { createTRPCRouter, publicProcedure } from '~/server/api/trpc'
+import { findBook } from '~/server/lib/findBok'
 
 const Book = z.object({
   book_id: z.string(),
@@ -35,6 +36,7 @@ export const exampleRouter = createTRPCRouter({
     )
     .query(async ({ input }) => {
       const result = await getAllBooks(input.userName)
+      await findBook(result[0]?.title || '')
       return { books: result }
     }),
 })

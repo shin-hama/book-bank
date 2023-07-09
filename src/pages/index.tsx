@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Account from './Account'
+import Account from '../components/Account'
 
 export default function Home() {
   return (
